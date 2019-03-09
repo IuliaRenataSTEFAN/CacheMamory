@@ -1,0 +1,72 @@
+STEFAN Iulia-Renata 
+323CB AN2 
+Tema 1 - POO 
+
+LRUCache:
+
+	Clasa contine: 
+	elementele din LRUCache(cacheElements), 
+	timeStamp(un contor),   
+	timeElements, adica un vector de inturi care va contine timeStamp-ul 
+	fiecarui element.
+
+	Functia add:
+	
+	Prima data verific daca este loc in cache si adaug noul element, 
+	plus actualizez timeStamp-ul
+
+	A doua oara incerc sa aflu un minim, adica elementul care a fost 
+	folosit cel mai de mult si il inlocuiec cu noul element, 
+	plus actualizez timeStamp-ul.
+	
+	Functia remove:
+	
+	Daca gasesc un element cu acelasi nume cu elementul nou, il sterg.
+	
+	In functia search, caut un element in cache.
+
+FIFOCache:
+
+	Clasa contine elementele din FIFOCache(), cacheElements.
+	
+	Functia add:
+	
+	Prima data verific de la dreapta la stanga 
+	daca este loc in cache si adaug noul element. 
+	
+	A doua oara, daca nu este loc in cache, mut toate elementele la dreapta, 
+	in felul acesta, stergand primul element inserat
+	si adaug noul element, pe prima pozitie in stanga.
+
+	Functia remove:
+	
+	Daca gasesc un element cu acelasi nume cu elementul nou, il sterg.
+	
+	In functia search, caut un element in cache.
+	
+LFUCache:
+
+	Clasa contine: 
+	elementele din LFUCache(cacheElements), 
+	timeStamp(un contor),   
+	timeElements, adica un vector de inturi care va contine timeStamp-ul 
+	fiecarui element,
+	accessElements, adica un vector de inturi care va contine numarul 
+	de accesari ale elementelor.
+	
+
+	Functia add:
+	
+	Prima data verific daca este loc in cache si adaug noul element, 
+	plus actualizez timeStamp-ul
+
+	A doua oara incerc sa aflu un minim, adica elementul 
+	care are numarul de accesari minim (in caz de egalitate, aleg elementul cu timestamp-ul 
+	cel mai vechi) si il inlocuiec cu noul element, 
+	plus actualizez timeStamp-ul si initializez accessElements.
+	
+	Functia remove:
+	
+	Daca gasesc un element cu acelasi nume cu elementul nou, il sterg.
+	
+	In functia search, caut un element in cache.

@@ -1,0 +1,9 @@
+FIFO
+2
+6
+ADD car 2 1
+ADD ball 1
+GET car
+GET ball
+GET table
+GET car
